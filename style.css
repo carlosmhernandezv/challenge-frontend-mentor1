@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;500&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    background-color:hsl(212, 45%, 89%);
+    display: flex;
+    flex-direction: column;
+}
+
+/*Text*/
+
+p, h1 {
+    font-family: 'Outfit', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    margin: 0;
+}
+
+p{
+    font-weight: 400;
+}
+
+/*Card design*/
+
+.card-conteiner{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 650px;
+    width: 400px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.image-container{
+    display: flex;
+    border-radius: 10px;
+}
+
+.image-container img{
+    position: static;
+    object-fit: cover;
+    width: 370px;
+    height: 400px;
+}
+
+.qr-photo{
+    object-fit:fill;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.card-info{
+    padding: 20px;
+}
+
+.card-info h1, p{
+    text-align: center;
+}
+
+/*Media queries*/
+
+@media (max-width: 375px) {
+    .card-conteiner{
+        height: 75%;
+        width: 80%;
+        margin: 20px 0px 20px;
+    }
+    .image-container img{
+        display: block;
+        max-width:100%;
+        height:auto;
+        overflow: hidden;
+    }
+    .qr-photo{
+        padding: 0;
+        margin: 15px;
+    }
+    .card-info{
+        padding-top: 0;
+    }
+}
